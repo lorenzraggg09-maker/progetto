@@ -93,7 +93,7 @@ while running:
     screen.fill(GRAY)
 
     spawn_timer += 1
-    if spawn_timer > 40:
+    if spawn_timer > 20:
         notes.append(Note(random.randint(0, 3)))
         spawn_timer = 0
 
@@ -145,6 +145,7 @@ while running:
 
     screen.blit(score_text, (10, 10))
     screen.blit(health_text, (10, 60))
+    
 
     if health <= 0:
         game_over = font.render("GAME OVER", True, (255, 0, 0))
